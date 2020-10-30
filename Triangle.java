@@ -29,6 +29,18 @@ public class Triangle {
     return(Math.sqrt(result));
   }
 
+  public String classify() {
+    double a = Math.round(((v1.distanceTo(v2)) * 10000.0)/ 10000.0);
+    double b = Math.round(((v2.distanceTo(v3)) * 10000.0)/ 10000.0);
+    double c = Math.round(((v3.distanceTo(v1)) * 10000.0)/ 10000.0);
+    if (a == b || b == c || a == c) {
+      if (a == b && b == c){
+        return("equilateral");
+      }
+      return("isosceles");
+    }
+    return("scalene");
+  }
 
 
 
