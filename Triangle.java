@@ -20,6 +20,15 @@ public class Triangle {
     return(a+b+c);
   }
 
+  public double getArea() {
+    double semiperimeter = getPerimeter() / 2;
+    double a = v1.distanceTo(v2);
+    double b = v2.distanceTo(v3);
+    double c = v3.distanceTo(v1);
+    double result = semiperimeter*(semiperimeter - a)*(semiperimeter - b)*(semiperimeter - c);
+    return(Math.sqrt(result));
+  }
+
 
 
 
