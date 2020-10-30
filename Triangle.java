@@ -48,6 +48,10 @@ public class Triangle {
     return str;
   }
 
-
+  public void setVertex(int index, Point newP) {
+    if (index == 0) v1 = newP;
+    if (index == 1) v2 = newP;
+    if (index == 2) v3 = newP;
+  }
 
 }
